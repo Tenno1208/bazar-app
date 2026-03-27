@@ -1,0 +1,13 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+
+Route::get('/transaksi', [TransaksiController::class,'index']);
+Route::post('/transaksi', [TransaksiController::class,'store']);
+Route::get('/laporan', [TransaksiController::class,'laporan']);
